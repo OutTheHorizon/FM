@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="arrow_down">&#xe614;</string>
+    <string name="arrow_up">&#xe61a;</string>
+    <string name="file">&#xe620;</string>
+    <string name="chevron_up">&#xe618;</string>
+    <string name="chevron_dowm">&#xe619;</string>
+    <string name="folder">&#xe622;</string>
+</resources>
