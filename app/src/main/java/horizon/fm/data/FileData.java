@@ -10,6 +10,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 /**
  * @Author Horizon
@@ -31,8 +32,9 @@ public class FileData {
     /**
      * 获得根目录
      */
-    public static void getRootFile(){
-
+    public static File getRootFile(){
+        File root = Environment.getRootDirectory();
+        return root;
     }
 
     /**

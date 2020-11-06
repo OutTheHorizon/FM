@@ -87,7 +87,7 @@ public class FileTreeItemView extends HorizonGroup {
         if(mCurFile.isDirectory()) {
             mTypeIcon.setText(R.string.folder);
             mTypeIcon.setTextColor(Color.parseColor("#d0d000"));
-            if(mCurFile.listFiles().length==0){
+            if(mCurFile!=null && mCurFile.listFiles()!=null && mCurFile.listFiles().length==0){
                 mExtendIcon.setTextColor(Color.parseColor("#800000"));
             }
         }else{
@@ -101,6 +101,9 @@ public class FileTreeItemView extends HorizonGroup {
 
             @Override
             protected void firstDoThing(View v) {
+                if(mCurFile==null){
+                    return;
+                }
                 //展开树节点下面的文件
                 if (mCurFile.isDirectory() && isFirst) {
                     mFileTreeItem.init(mCurFile);
@@ -114,6 +117,9 @@ public class FileTreeItemView extends HorizonGroup {
 
             @Override
             protected void thenDoThing(View v) {
+                if(mCurFile==null){
+                    return;
+                }
                 if(mCurFile.isDirectory()) {
                     mExtendIcon.setText(R.string.arrow_up);
                 }
